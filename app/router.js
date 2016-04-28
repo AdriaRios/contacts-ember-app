@@ -6,6 +6,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('contacts-list', function() {
+    this.route('contact', {path: '/contact/:id'});
+    this.route('add-contact');
+  });
 });
 
 export default Router;
