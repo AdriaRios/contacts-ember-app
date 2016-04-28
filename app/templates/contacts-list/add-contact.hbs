@@ -1,8 +1,2 @@
-<div class="col-sm-4">
-<h2>New contact:</h2>
-<div>Name: {{input class="form-control" value=model.nameFirst placeholder="Recipient's username" }}</div>
-<div>Surname: {{input class="form-control" value=model.nameLast placeholder="Recipient's username" }}</div>
-<div>email: {{input  class="form-control" value=model.email placeholder="Recipient's username" }}</div>
-<button {{action "confirmAddContact" }}  class="btn btn-primary" type="button">Confirm</button>
-</div>
+{{add-contact-component}}
 {{outlet}}
