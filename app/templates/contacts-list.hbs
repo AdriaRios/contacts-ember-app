@@ -1,9 +1,14 @@
-<div class="col-sm-4">
+
+
+<!--<div class="col-sm-4">
 <ul class="nav nav-pills nav-stacked">
 {{#each model as |contact|}}
   <li role="presentation"><a {{action "click" contact}} href="#">{{contact.nameFirst}}</a></li>
 {{/each}}
 </ul>
 <button {{action "addContact" }}  class="btn btn-primary" type="button">Add Contact</button>
-</div>
+</div>-->
+
+{{contact-list contacts=model}}
+
 {{outlet}}
