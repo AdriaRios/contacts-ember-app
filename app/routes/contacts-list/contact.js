@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import { hasMany } from 'ember-data/relationships';
 
 export default Ember.Route.extend({
   model(params) {

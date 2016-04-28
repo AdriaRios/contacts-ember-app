@@ -1,0 +1,6 @@
+<div> Contacto! {{currentContact.nameFirst}} {{currentContact.nameLast}} {{currentContact.email}} {{currentContact.phoneNumbers}} </div>
+{{#each currentContact.phoneNumbers as |phoneNumber|}}
+  <li role="presentation"><a {{action "click" contact}} href="#">{{phoneNumber.phoneNumber}}</a></li>
+{{/each}}
+<button {{action "addPhoneNumber" }}  class="btn btn-primary" type="button">Add Phone Number</button>
+{{yield}}
