@@ -1,6 +1,17 @@
-<div> Contacto! {{currentContact.nameFirst}} {{currentContact.nameLast}} {{currentContact.email}} {{currentContact.phoneNumbers}} </div>
-{{#each currentContact.phoneNumbers as |phoneNumber|}}
-  <li role="presentation"><a {{action "click" contact}} href="#">{{phoneNumber.phoneNumber}}</a></li>
-{{/each}}
-<button {{action "addPhoneNumber" }}  class="btn btn-primary" type="button">Add Phone Number</button>
+<div class="col-sm-4"> Contacto! {{currentContact.nameFirst}} {{currentContact.nameLast}} {{currentContact.email}}
+  <div>
+    {{#each currentContact.phoneNumbers as |phoneNumber|}}
+      <li role="presentation"><a href="#">{{phoneNumber.phoneNumber}}</a></li>
+      {{/each}}
+  </div>
+  <div class={{addContactClass}}>
+    <div>Phone: {{input class="form-control" value=newPhone.phoneNumber placeholder="number" }}</div>
+    <div>Name: {{input class="form-control" value=newPhone.name placeholder="name" }}</div>
+    <button style="margin-top:10px" {{action "savePhoneNumber" }}  class="btn btn-primary" type="button">Save Phone Number</button>
+  </div>
+  <div class="input-group" style="margin-top:10px">
+    <button {{action "addPhoneNumber" }}  class="btn btn-primary" type="button">Add Phone Number</button>
+  </div>
+
+</div>
 {{yield}}
