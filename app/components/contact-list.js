@@ -8,7 +8,7 @@ export default Ember.Component.extend({
       'email':''
     });
     this._super(...arguments);
-  }
+  },
   //Actions
   actionClick: 'click',
   actionAddContact: 'addContact',
