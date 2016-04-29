@@ -14,13 +14,13 @@ export default Ember.Component.extend({
   //Actions Handlers
 
   setContactClass(){
-    var currentClass = (this.get('addContactClass') ==='input-group')?'hidden':'input-group';
-    return currentClass;
+    return this.get('addContactClass') ==='input-group' ? 'hidden' : 'input-group';
   },
 
   actions: {
-    addPhoneNumber() {
-      this.set('addContactClass', this.setContactClass())
+    togglePhoneForm() {
+      let newContactClass = this.get('addContactClass') ==='input-group' ? 'hidden' : 'input-group';
+      this.set('addContactClass', newContactClass);
     },
     savePhoneNumber() {
       var contact = this.get('currentContact');
