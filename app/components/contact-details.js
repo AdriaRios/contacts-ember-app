@@ -14,7 +14,7 @@ export default Ember.Component.extend({
   //Actions Handlers
 
   setContactClass(){
-    var currentClass = (this.get('addContactClass') ==='input-group')?'hidden':'input-group'
+    var currentClass = (this.get('addContactClass') ==='input-group')?'hidden':'input-group';
     return currentClass;
   },
 
