@@ -2,11 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(){
-    var posts = this.store.findAll('contact');
-    return posts;
+    return this.store.findAll('contact');;
   },
   actions: {
-    click(params) {
+    viewContact(params) {
       this.transitionTo('contacts-list.contact', params.id);
     },
     addContact() {
